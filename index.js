@@ -85,7 +85,7 @@ module.exports = function (options) {
       var vendorPrefixes = 'Khtml Ms O Moz Webkit'.split(' ');
       var count = vendorPrefixes.length;
 
-      if (div.style[prop]) {
+      if (prop in div.style) {
         return true;
       }
 
@@ -94,7 +94,7 @@ module.exports = function (options) {
       });
 
       while (count--) {
-        if (div.style[vendorPrefixes[count] + prop]) {
+        if (vendorPrefixes[count] + prop in div.style) {
           return true;
         }
       }
