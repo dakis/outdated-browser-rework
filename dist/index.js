@@ -129,7 +129,7 @@ var outdatedBrowserRework =
 	        return true;
 	      }
 	      var div = document.createElement('div');
-	      var vendorPrefixes = 'Khtml Ms O Moz Webkit'.split(' ');
+	      var vendorPrefixes = 'Khtml ms O Moz Webkit'.split(' ');
 	      var count = vendorPrefixes.length;
 
 	      if (prop in div.style) {
